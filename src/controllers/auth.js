@@ -80,7 +80,7 @@ const logout = async (req, res) => {
         );
 
         res.clearCookie('refreshToken');
-        return res.status(200).send({message: "Logout Berhasil"})
+        return res.status(200).send({message: "Loged Out Successfully!"})
     } catch (error) {
         res.status(500).send({ message: "Internal Server error" })
     }
