@@ -11,13 +11,13 @@ route.get('/', (req, res) => {
 })
 
 // auth route
-route.post('/auth/signup', register)
-route.post('/auth/signin', login)
-route.delete('/auth/users/logout', middleware, logout)
+route.post('/api/auth/signup', register)
+route.post('/api//auth/signin', login)
+route.delete('/api/auth/users/logout', middleware, logout)
 
 // user route
-route.get('/users/current', middleware, getUser)
-route.post('/users/current/scraplisthotel', middleware, scrapListHotel)
-route.post('/users/current/scraphotel', middleware, scrapHotel)
-route.get('/users/current/listhotel', middleware, getListHotels)
-route.get('/users/current/listdetailhotel', middleware, getListDetailHotel)
+route.get('/api/users/current', middleware, getUser)
+route.post('/api/users/current/scraplisthotel', middleware, scrapListHotel)
+route.post('/api/users/current/scraphotel', middleware, scrapHotel)
+route.get('/api/users/current/listhotel', middleware, getListHotels)
+route.get('/api/users/current/listdetailhotel', middleware, getListDetailHotel)
