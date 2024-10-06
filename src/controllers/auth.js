@@ -10,7 +10,7 @@ const register = async (req, res) => {
 
         const user = await User.findOne({ email: req.body.email })
         if (user)
-            return res.status(409).send({ message: "User with given email already exist!" })
+            return res.status(400).send({ message: "User with given email already exist!" })
 
         const salt = await bcrypt.genSalt(Number(process.env.SALT))
         const hashPassword = await bcrypt.hash(req.body.password, salt)
